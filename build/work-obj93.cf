@@ -1,0 +1,7 @@
+v 4
+file . "../T1/alu_tb.vhdl" "fff652688adb3d080fd5a023bd57f04523ffddb3" "20230512135917.356":
+  entity alu_tb at 1( 0) + 0 on 21;
+  architecture a of alu_tb at 7( 100) + 0 on 22;
+file . "../T1/alu.vhdl" "f38e40c3b9aa4985edfc69ce66be0d34460fafcd" "20230512135917.335":
+  entity alu at 1( 0) + 0 on 19;
+  architecture a of alu at 13( 282) + 0 on 20;

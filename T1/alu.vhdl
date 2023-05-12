@@ -62,31 +62,29 @@ begin
         aluout <= std_logic_vector(shift_right(signed(op1), to_integer(unsigned(op2(4 downto 0)))));  
 
       -- -- BRANCHING
-      when "10000" => -- beq
+      when "10000" | "11000"=> -- beq
         do_jump <= to_std_logic(op1 = op2);
 
- 
-      when "10001" => -- bne
+      when "10001" | "11001"=> -- bne
         do_jump <= to_std_logic(op1 /= op2);
 
-      when "10010" => -- do not jump
+      when "10010" | "11010" => -- do not jump
           do_jump <= '0';
 
-      when "10011" => -- jal, jalr
+      when "10011" | "11011" => -- jal, jalr
           do_jump <= '1';
           aluout <= std_logic_vector((unsigned(op1) + 4)); 
 
-      when "10100" => -- blt
+      when "10100" | "11100" => -- blt
         do_jump <= to_std_logic(signed(op1) < signed(op2));
 
-      when "10101" => -- bge
+      when "10101" | "11101" => -- bge
         do_jump <= to_std_logic(signed(op1) >= signed(op2));
 
-      
-      when "10110" => -- bltu
+      when "10110" | "11110" => -- bltu
         do_jump <= to_std_logic(unsigned(op1) < unsigned(op2));
    
-      when "10111" => -- bgeu
+      when "10111" | "11111" => -- bgeu
         do_jump <= to_std_logic(unsigned(op1) >= unsigned(op2));
       
       when others =>
