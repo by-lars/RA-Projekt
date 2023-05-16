@@ -1,7 +1,0 @@
-v 4
-file . "../alu.vhdl" "e6097341c317de6d18c0b42ee68e3a045b41f500" "20230512131044.205":
-  entity alu at 1( 0) + 0 on 105;
-  architecture a of alu at 13( 282) + 0 on 106;
-file . "../alu_tb.vhdl" "fff652688adb3d080fd5a023bd57f04523ffddb3" "20230512131814.048":
-  entity alu_tb at 1( 0) + 0 on 115;
-  architecture a of alu_tb at 7( 100) + 0 on 116;

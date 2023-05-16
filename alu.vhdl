@@ -33,6 +33,7 @@ begin
         else
           aluout <= (aluout'high downto 0 => '0');
         end if;
+        --hexadezimale 1 mit 32 bit: x"00000001"
 
       when "00011" => -- sltu (unsigned)
         if(unsigned(op1) < unsigned(op2)) then
