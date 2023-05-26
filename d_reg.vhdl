@@ -17,7 +17,4 @@ process(clk) begin
     d_out <= d_in;
   end if;
 end process;
-
-
-  
 end architecture;
