@@ -5,9 +5,9 @@ use ieee.numeric_std.all;
 entity d_reg is generic(
   width : natural := 32
 ); port(
-  d_in : in std_logic_vector((width-1) downto 0);
+  d_in : in std_logic_vector((width-1) downto 0) := ((width -1) downto 0 => '0');
   clk : in std_logic;
-  d_out : out std_logic_vector((width-1) downto 0)
+  d_out : out std_logic_vector((width-1) downto 0) := ((width -1) downto 0 => '0')
 ); end entity;
 
 architecture behav of d_reg is
